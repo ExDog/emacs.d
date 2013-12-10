@@ -29,7 +29,12 @@ Python, Javascript, PHP and a number of other languages.
 git clone https://github.com/exdog/emacs.d.git ~/.emacs.d
 ```
 
+<<<<<<< HEAD
 当以这种配置第一次启动emcas, 很多第三方包将会自动安装.
+=======
+Upon starti up Emacs for the first time, further third-party
+packages will be automatically downloaded and installed.
+>>>>>>> dd02204179ee777c1457631050f136dc06a503b1
 
 ## 更新
 

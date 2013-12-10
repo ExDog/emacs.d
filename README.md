@@ -39,7 +39,7 @@ To install, clone this repo to `~/.emacs.d`, i.e. ensure that the
 git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
 ```
 
-Upon starting up Emacs for the first time, further third-party
+Upon starti up Emacs for the first time, further third-party
 packages will be automatically downloaded and installed.
 
 ## Updates

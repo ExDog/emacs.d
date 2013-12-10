@@ -13,10 +13,6 @@ emacs 支持多种语言，这个配置支持一下语言开发：
 * Erlang
 * Common Lisp (with Slime)
 
-In particular, there's a nice config for *tab autocompletion*, and
-flycheck is used to immediately highlight syntax errors in Ruby, HAML,
-Python, Javascript, PHP and a number of other languages.
-
 ## 所需
 
 * Emacs 23 or 24.3
@@ -29,12 +25,10 @@ Python, Javascript, PHP and a number of other languages.
 git clone https://github.com/exdog/emacs.d.git ~/.emacs.d
 ```
 
-<<<<<<< HEAD
 当以这种配置第一次启动emcas, 很多第三方包将会自动安装.
-=======
 Upon starti up Emacs for the first time, further third-party
 packages will be automatically downloaded and installed.
->>>>>>> dd02204179ee777c1457631050f136dc06a503b1
+
 
 ## 更新
 
@@ -53,3 +47,28 @@ packages will be automatically downloaded and installed.
 
 (provide 'init-local)
 ```
+## 内置中文输入法
+
+ [中文输入法下载](http://sourceforge.net/projects/zhdotemacs/files/chinese%20emacs%20input%20methods/)
+
+* 安装输入法
+
+        #tar -xvf emacsim.tar.bz2
+        #cd emacsim
+
+* 如果是MacOS X
+
+        #cp -r gb big5 /usr/local/Cellar/emacs/HEAD/share/emacs/24.3.50/leim
+
+* 如果是Debian
+
+        #cp -r gb big5 /usr/share/emacs/24.3.50/leim
+
+* 然后修改leim目录中的leim-list.el加入以下：
+
+    (register-input-method
+    "chinese-pinyin-gb" "Chinese-CNS" 'quail-use-package
+    "拼音" "汉字输入∷【拼音】∷"
+    "gb/pinyin")
+
+重启Emacs后，使用快捷键C-x Return C-\，然后选择chinese-pinyin-gb即可。 c-\切换

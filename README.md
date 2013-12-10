@@ -1,13 +1,6 @@
-# A reasonable Emacs config
+# 一个合理的emacs配置
 
-This is my emacs configuration tree, continually used and tweaked
-since 2000, and it may be a good starting point for other Emacs
-users, especially those who are web developers. These days it's
-somewhat geared towards OS X, but it is known to also work on Linux
-and Windows.
-
-Emacs itself comes with support for many programming languages. This
-config adds improved defaults and extended support for the following:
+emacs 支持多种语言，这个配置支持一下语言开发：
 
 * Ruby / Ruby on Rails
 * CSS / LESS / SASS / SCSS
@@ -24,56 +17,34 @@ In particular, there's a nice config for *tab autocompletion*, and
 flycheck is used to immediately highlight syntax errors in Ruby, HAML,
 Python, Javascript, PHP and a number of other languages.
 
-## Requirements
+## 所需
 
-* Emacs 23 or greater (note that Emacs 24 is required for some
-  functionality, and will likely become the minimum required version
-  some time soon.)
+* Emacs 23 or 24.3
 
-## Installation
+## 安装
 
-To install, clone this repo to `~/.emacs.d`, i.e. ensure that the
-`init.el` contained in this repo ends up at `~/.emacs.d/init.el`:
+  克隆这个项目到 `~/.emacs.d`, 确保`init.el` 在 `~/.emacs.d/init.el`:
 
 ```
-git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
+git clone https://github.com/exdog/emacs.d.git ~/.emacs.d
 ```
 
-Upon starting up Emacs for the first time, further third-party
-packages will be automatically downloaded and installed.
+当以这种配置第一次启动emcas, 很多第三方包将会自动安装.
 
-## Updates
+## 更新
 
-Update the config with `git pull`. You'll probably also want/need to update
-the third-party packages regularly too:
+ `git pull` 更新这个项目.
+ 你也许只是想更新部分包:
 
 <kbd>M-x package-list-packages</kbd>, then <kbd>U</kbd> followed by <kbd>x</kbd>.
 
-## Adding your own customization
+## 加入自己的配置
 
-To add your own customization, use <kbd>M-x customize</kbd> and/or
-create a file `~/.emacs.d/init-local.el` which looks like this:
+ 加入自己的配置, 使用 <kbd>M-x customize</kbd> 或者
+新建一个el`~/.emacs.d/init-local.el` 内容如同:
 
 ```el
 ... your code here ...
 
 (provide 'init-local)
 ```
-
-Alternatively, fork the repo and hack away at the config to make it your own!
-
-## Similar configs
-
-You might also want to check out `emacs-starter-kit` and `emacs-prelude`.
-
-## Support / issues
-
-If you hit any problems, please [file an issue on the github project](https://github.com/purcell/emacs.d)
-
--Steve Purcell
-
-<hr>
-
-[![](http://api.coderwall.com/purcell/endorsecount.png)](http://coderwall.com/purcell)
-
-[![](http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png)](http://uk.linkedin.com/in/stevepurcell)
